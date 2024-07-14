@@ -357,26 +357,13 @@ document.addEventListener('DOMContentLoaded', () => {
     checkLoginStatus();
 });
 
-function formRegister() {
-    document.getElementById('modalRegister').style.display = 'block';
-}
-
-function formLogin() {
-    document.getElementById('modalLogin').style.display = 'block';
-}
-
-function back() {
-    document.getElementById('modalRegister').style.display = 'none';
-    document.getElementById('modalLogin').style.display = 'none';
-}
-
 function getUser(callback) {
     fetch(apiUser)
-        .then(function(res) {
+        .then(function (res) {
             return res.json();
         })
         .then(callback)
-        .catch(function(err) {
+        .catch(function (err) {
             console.error("Có lỗi xảy ra:", err);
         });
 }
