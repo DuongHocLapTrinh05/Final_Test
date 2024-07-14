@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar-white">
+        <a href="listing.html" target="_top"><img src="/images/logo_en.png" alt="" class="logo" ></a>
+        <ul class="nav-links">
+            <li><a href="index.html" >Popular Places</a></li>
+            <li><a href="listing.html" class="active">Online Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <a href="#" class="register-btn" onclick="formRegister()">Sign Up Now</a>
+        <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
+    </nav>
+
+    <div class="modal" id="modalRegister">
+        <div class="modal__body">
+            <div class="auth-form ">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Sign Up</h3>
+                        <span class="auth-form__switch-btn" onclick="formLogin()">Sign In</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Password">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            By signing up, you agree to the
+                            <a href="" class="auth-form__policy-link">Terms of Service</a> &
+                            <a href="" class="auth-form__policy-link">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn" onclick="back()">Back</button>
+                        <button class="btn btn--primary" type="submit">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="btn btn--width-icon btn--width-left">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Connect With FaceBook</span>
+                    </a>
+                    <a href="" class="btn btn--width-icon btn--width-right">
+                        <i class="fa-brands fa-google"></i>
+                        <span> Connect With Google</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal" id="modalLogin">
+        <div class="modal__body" id="open">
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Sign In</h3>
+                        <span class="auth-form__switch-btn" onclick="formRegister()">Sign Up</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            By signing up, you agree to the
+                            <a href="" class="auth-form__policy-link">Terms of Service</a> &
+                            <a href="" class="auth-form__policy-link">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn" onclick="back()">Back</button>
+                        <button class="btn btn--primary" type="submit">Sign In</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="btn btn--width-icon btn--width-left">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Connect With FaceBook</span>
+                    </a>
+                    <a href="" class="btn btn--width-icon btn--width-right">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Connect With Google</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="list-container">
+            <div class="left-col">
+                <p>200+ Options</p>
+                <h1>Recommend Places</h1>
+            <div id="product">
+                <div class="house" data-location="Ha Noi" data-hotel="Ja Cosmo" >
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-1.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Hoan Kiem Distric, Ha Noi</span>
+                            <a href="#"><h3>Ja Cosmo Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>Family </p>
+                                <h4>$ 200 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Ho Chi Minh" data-hotel="Tuong Vy">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-2.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>District 1, Ho Chi Minh City</span>
+                            <a href="#"><h3>Tuong Vy Signature</h3></a>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <div class="house-price">
+                                <p>Family </p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Ho Chi Minh" data-hotel="Millennium">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-3.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Distric 4, Ho Chi Minh City</span>
+                            <a href="#"><h3>Millennium Saigon</h3></a>
+                            <p>Bedroom / Bathroom / Wifi / Pool</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 150 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Ha Noi" data-hotel="Du Palace">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-4.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Hoan Kiem Distric, Ha Noi</span>
+                            <a href="#"><h3>Hotel Du Palace</h3></a>
+                            <p>Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 125 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Nha Trang" data-hotel="The Signature">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-5.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Nha Trang Beach, Nha Trang</span>
+                            <a href="#"><h3>The Signature Hotel Nha Trang</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 200 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Nha Trang" data-hotel="Tuong Vy">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-6.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Nha Trang Beach, Nha Trang</span>
+                            <a href="#"><h3>Oceanfront Residence Nha Trang</h3></a>
+                            <p> Bedroom / Bathroom / Wifi / Pool</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>4 Guest </p>
+                                <h4>$ 160 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Quang Ninh" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-7.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Tan Mai Street, Ha Long</span>
+                            <a href="#"><h3>D'Lecia Ha Long Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi / Pool</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <div class="house-price">
+                                <p>4 Guest </p>
+                                <h4>$ 250 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Quang Ninh" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-8.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Ha Long City, Ha Long</span>
+                            <a href="#"><h3>Harmony Ha Long Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest </p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Ha Noi" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-9.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Dong Da District, Ha Noi</span>
+                            <a href="#"><h3>Eli Rina Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 120 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Ha Noi" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-10.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Hoan Kiem District, Ha Noi</span>
+                            <a href="#"><h3>Shining Central Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <div class="house-price">
+                                <p>4 Guest </p>
+                                <h4>$ 250 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Quang Ninh" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-11.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Ha Long City, Quang Ninh Province</span>
+                            <a href="#"><h3>DeLaSea Ha Long Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 150 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Nha Trang" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-12.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Minh Khai Street, Nha Trang</span>
+                            <a href="#"><h3>Capital Beachfront Nha Trang</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest </p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="house" data-location="Quang Ninh" data-hotel="D'Lecia">
+                        <div class="house-img">
+                            <a href="#"><img src="images/house-13.jpg" alt=""></a>
+                        </div>
+                        <div class="house-info">
+                            <span class="house-location"><i class="fa-solid fa-location-dot"></i>Ha Long City, Quang Ninh Province</span>
+                            <a href="#"><h3>DeLaSea Ha Long Hotel</h3></a>
+                            <p> Bedroom / Bathroom / Wifi </p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-alt"></i>
+                            <div class="house-price">
+                                <p>3 Guest </p>
+                                <h4>$ 150 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div class="right-col">
+                <div class="sidebar">
+                    <h2>Select Filters</h2>
+
+                    <div class="filter">
+                        <button class="filter-btn active"  data-location="all"></button>
+                        <p>All</p>
+                    </div>
+                    <div class="filter">
+                        <button class="filter-btn"  data-location="Ha Noi"></button>
+                        <p>Ha Noi</p>
+                    </div>
+                    <div class="filter">
+                        <button class="filter-btn" data-location="Ho Chi Minh"></button>
+                        <p>Ho Chi Minh</p>
+                    </div>
+                    <div class="filter">
+                        <button class="filter-btn" data-location="Nha Trang"></button>
+                        <p>Nha Trang</p>
+                    </div>
+                    <div class="filter">
+                        <button class="filter-btn" data-location="Quang Ninh"></button>
+                        <p>Quang Ninh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__paging">
+            <img src="images/arrow.png" alt="" class="left-arrow">
+            <div class="number-page" id="number-page">
+                <a class="current">1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+            </div>
+            <img src="images/arrow.png" alt="" class="right-arrow">
+        </div>
+        
+ 
+
+        <div class="footer">
+            <a href="http://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="http://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="http://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="http://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="http://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <hr>
+            <p>Copyright @ 2024, Travel VietNam </p>
+        </div>
+    </div>
+
+    <div id="house-details"></div>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLoginStatus();
+        });
+    </script>
+</body>
+
+
+</html>

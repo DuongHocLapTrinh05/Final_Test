@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="header" id="header">
+        <nav id="navbar">
+            <a href="/index.html"><img src="/images/logo_en.png" class="logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Popular Places</a></li>
+                <li><a href="listing.html">Online Packages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="#" class="register-btn" id="registerBtn" onclick="formRegister()">Sign Up Now</a>
+            <i class="fa-solid fa-user" id="userIcon" style="display: none;" onclick="toggleLogoutMenu()"></i>
+            <div class="logout-menu" id="logoutMenu" style="display: none;">
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+            <i class="fa-solid fa-bars" onclick="toggleBtn()"></i>
+        </nav>
+        <div class="modal" id="modalRegister">
+            <div class="modal__body">
+                <div class="auth-form ">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Sign Up</h3>
+                            <span class="auth-form__switch-btn" onclick="formLogin()">Sign In</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email" id="regEmail">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Password" id="regPassword">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Confirm Password" id="regConfirmPassword"> 
+                            </div>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                By signing up, you agree to the
+                                <a href="" class="auth-form__policy-link">Terms of Service</a> &
+                                <a href="" class="auth-form__policy-link">Privacy Policy</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn" onclick="back()">Back</button>
+                            <button class="btn btn--primary" type="submit" onclick="registerUser()">Sign Up</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__socials">
+                        <a href="" class="btn btn--width-icon btn--width-left">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Connect With FaceBook</span>
+                        </a>
+                        <a href="" class="btn btn--width-icon btn--width-right">
+                            <i class="fa-brands fa-google"></i>
+                            <span> Connect With Google</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal" id="modalLogin">
+            <div class="modal__body" id="open">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Sign In</h3>
+                            <span class="auth-form__switch-btn" onclick="formRegister()">Sign Up</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email" id="email">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Password" id="password">
+                            </div>
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                By signing up, you agree to the
+                                <a href="" class="auth-form__policy-link">Terms of Service</a> &
+                                <a href="" class="auth-form__policy-link">Privacy Policy</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn" onclick="back()">Back</button>
+                            <button class="btn btn--primary" type="submit" onclick="login()">Sign In</button>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__socials">
+                        <a href="" class="btn btn--width-icon btn--width-left">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <span>Connect With FaceBook</span>
+                        </a>
+                        <a href="" class="btn btn--width-icon btn--width-right">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Connect With Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Find your next stay</h1>
+            <div class="search-bar">
+                <form>
+                    <div class="location-input">
+                        <label for="">Location</label>
+                        <input type="text" placeholder="Where are you going?">
+                    </div>
+                    <div>
+                        <label for="">Check in</label>
+                        <input type="text" placeholder="Add date">
+                    </div>
+                    <div>
+                        <label for="">Check out</label>
+                        <input type="text" placeholder="Add date">
+                    </div>
+                    <div>
+                        <label for="">Guest</label>
+                        <input type="text" placeholder="Add guest">
+                    </div>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <h2 class="sub-title">Exclusives</h2>
+        <div class="exclusives">
+            <div>
+                <img src="/images/e1.jpg" alt="">
+                <span>
+                    <h3>One Pillar Pagoda</h3>
+                    <p>Starts @ 100$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e2.jpg" alt="">
+                <span>
+                    <h3>Dragon Bridge</h3>
+                    <p>Starts @ 125$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e3.jpg" alt="">
+                <span>
+                    <h3>Fansipan</h3>
+                    <p>Starts @ 120$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e4.jpg" alt="">
+                <span>
+                    <h3>Ha Long Bay</h3>
+                    <p>Starts @ 80$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e5.jpg" alt="">
+                <span>
+                    <h3>Hue</h3>
+                    <p>Starts @ 90$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e6.jpg" alt="">
+                <span>
+                    <h3>Cat Ba Island</h3>
+                    <p>Starts @ 70$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e7.jpg" alt="">
+                <span>
+                    <h3>Phu Quoc Island</h3>
+                    <p>Starts @ 200$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e8.jpg" alt="">
+                <span>
+                    <h3>Hoi An</h3>
+                    <p>Starts @ 160$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e9.jpg" alt="">
+                <span>
+                    <h3>Sam Son Beach</h3>
+                    <p>Starts @ 140$</p>
+                </span>
+            </div>
+            <div>
+                <img src="images/e10.jpg" alt="">
+                <span>
+                    <h3>Golden Bridge</h3>
+                    <p>Starts @ 95$</p>
+                </span>
+            </div>
+        </div>
+
+        <h2 class="sub-title">Trending Places</h2>
+        <div class="trending">
+            <div>
+                <img src="images/t1.jpg" alt="">
+                <h3>Ha Noi</h3>
+            </div>
+            <div>
+                <img src="images/t2.jpg" alt="">
+                <h3>Ho Chi Minh</h3>
+            </div>
+            <div>
+                <img src="images/t3.jpg" alt="">
+                <h3>Nha Trang</h3>
+            </div>
+            <div>
+                <img src="images/t4.jpg" alt="">
+                <h3>Quang Ninh</h3>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h3>Sharing <br> is Earing now</h3>
+            <p>Great opportunity to make money by <br> sharing your extra space.</p>
+            <a href="" class="cta-btn">Know more</a>
+        </div>
+
+        <h2 class="sub-title">Travelers Stories</h2>
+        <div class="stories">
+            <div>
+                <img src="images/story-1.png" alt="">
+                <p>Embarking on a serene morning voyage, the boat sailed smoothly over the blue waters. The gentle
+                    breeze and rhythmic waves brought a sense of tranquility and inner peace.</p>
+            </div>
+            <div>
+                <img src="images/story-2.png" alt="">
+                <p>Standing atop the mountain peak, I marveled at the vast landscape below. The majestic rocky peaks and
+                    lush green valleys were a testament to nature's grandeur and beauty.</p>
+            </div>
+            <div>
+                <img src="images/story-3.png" alt="">
+                <p>The journey through rugged trails led me to this awe-inspiring rock formation. With a sense of
+                    accomplishment and adventure, I stood proud, reflecting on the challenges overcome.</p>
+            </div>
+        </div>
+        <a href="" class="start-btn">Start making money</a>
+
+
+
+        <div class="footer">
+            <a href="http://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="http://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="http://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="http://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="http://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <hr>
+            <p>Copyright @ 2024, Travel VietNam </p>
+        </div>
+
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLoginStatus();
+        });
+    </script>
+</body>
+
+</html>
