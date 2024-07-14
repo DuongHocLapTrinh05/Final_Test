@@ -303,54 +303,7 @@ function house({
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-alt"></i>
-                    </span> &nbsp; &nbsp; 272 reviews &nbsp; &nbsp; Response rate 93% &nbsp;
-                    &nbsp; Response time: 53 min</p>
-            </div>
-        </div>
-        <a href="" class="contact-host">Contact Host</a>
-        <div class="container">
-            <div class="footer">
-                <a href="http://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="http://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                <a href="http://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="http://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="http://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <hr>
-                <p>Copyright @ 2024, Travel VietNam </p>
-            </div>
-        </div>
-
-        `;
-        addClickEventToGallery();
-
-    };
-
-};
-// show galleryImgs with overlay('modal')
-
-function addClickEventToGallery() {
-    const galleryImgs = document.querySelectorAll('.gallery-img img');
-    galleryImgs.forEach(img => {
-        img.addEventListener('click', function () {
-            const overlay = document.createElement('div');
-            overlay.classList.add('modal');
-            const enlargedImg = document.createElement('img');
-            enlargedImg.src = img.src;
-            enlargedImg.className = 'enlarged-img';
-            overlay.appendChild(enlargedImg);
-            document.body.appendChild(overlay);
-            enlargedImg.addEventListener('click', function (e) {
-                e.stopPropagation();
-            });
-            overlay.addEventListener('click', function () {
-                document.body.removeChild(overlay);
-            });
-        });
-    });
-}
-
+                        <i capi
 let apiUser = "http://localhost:3000/user";
 
 document.addEventListener('DOMContentLoaded', () => {
