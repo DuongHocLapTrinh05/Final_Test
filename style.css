@@ -156,7 +156,10 @@ nav{
     grid-gap:30px;
     margin-bottom: 30px; 
 }
-
+.trending div a{
+    text-decoration: none;
+    color: #514848;
+}
 .trending div img{
     width: 100%;
     border-radius: 10px;
